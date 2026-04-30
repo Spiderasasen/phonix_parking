@@ -7,7 +7,14 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© OpenStreetMap'
 }).addTo(map);
 
-// Example marker for McMichael
-L.marker([36.1033, -79.5057])
-    .addTo(map)
-    .bindPopup("<b>McMichael East</b><br>Ticket trends, info, etc.");
+// Elon University bounding box (approx)
+const elonBounds = L.latLngBounds(
+    [36.0985, -79.5135], // Southwest corner
+    [36.1075, -79.4980]  // Northeast corner
+);
+
+// Lock the map inside these bounds
+map.setMaxBounds(elonBounds);
+
+// Add a little bounce-back when hitting the edge
+map.setMinZoom(16);
