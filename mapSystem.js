@@ -101,5 +101,33 @@ const linderLot2 = L.polygon([
 // Label the lot
 linderLot2.bindPopup("<b>FS Lot</b><br>Faculty/Staff Parking");
 
+const moonyLot = L.polygon([
+    [36.10100874505716,  -79.50388639005328],
+    [36.10103258271843, -79.50289696657525],
+    [36.100887389578475, -79.50288892248194],
+    [36.100857050679494, -79.5038676205022]
+], {
+    color: "#FFD700",       // border color
+    fillColor: "#FFD700",   // fill color
+    fillOpacity: 0.4
+}).addTo(map);
+
+// Label the lot
+moonyLot.bindPopup("<b>FS Lot</b><br>Faculty/Staff Parking");
+
+const factulyLine = L.polygon([
+    [36.10066633978317, -79.50614192767037],
+    [36.10074002143866, -79.50251321052166],
+    [36.10067935019355, -79.50251316238086],
+    [36.10061216630169, -79.50613927755522]
+], {
+    color: "#FFD700",       // border color
+    fillColor: "#FFD700",   // fill color
+    fillOpacity: 0.4
+}).addTo(map);
+
+// Label the lot
+factulyLine.bindPopup("<b>FS Lot</b><br>Faculty/Staff Parking");
+
 map.on('click', e => console.log(e.latlng));
 
