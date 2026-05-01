@@ -8,12 +8,73 @@
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </head>
 <body>
+<!--main header-->
     <div class="header">
         <h1>Phonix Parking</h1>
     </div>
+
+<!--    side header-->
+    <div id="sidebar" class="sidebar">
+        <hr/>
+        <div class="sidebar-header">
+            <button id="closeSideBar">X</button>
+        </div>
+
+        <!--            filter and report button-->
+        <div class="sidebar-section">
+            <h3>Report a Ticket</h3>
+            <label>Day of Week</label>
+            <select id="ticket-day">
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+                <option>Saturday</option>
+                <option>Sunday</option>
+            </select>
+
+            <label>Time</label>
+            <input type="time" id="ticket-time">
+
+            <label>Location</label>
+            <select id="ticket-location">
+                <option>Global</option>
+                <option>McMichael</option>
+                <option>Colonnades</option>
+                <option>Historic</option>
+                <option>Crest</option>
+            </select>
+
+            <button id="submitTicket">Submit</button>
+        </div>
+
+        <div class="sidebar-section">
+            <h3>Filters</h3>
+
+            <label>Day</label>
+            <select id="filter-day">
+                <option>Any</option>
+                <option>Monday</option>
+                <option>Tuesday</option>
+                <option>Wednesday</option>
+                <option>Thursday</option>
+                <option>Friday</option>
+            </select>
+
+            <label>Time Range</label>
+            <input type="time" id="filter-start">
+            <input type="time" id="filter-end">
+
+            <button id="applyFilters">Apply Filters</button>
+        </div>
+    </div>
+    <button id="openSidebar" class="floating-btn">☰</button>
+
 <!--    for the map to work-->
     <div id="map"></div>
 
-    <script src="mapSystem.js"></script>
+<script src="sidebar_functions.js"></script>
+<script src="mapSystem.js"></script>
 </body>
 </html>
