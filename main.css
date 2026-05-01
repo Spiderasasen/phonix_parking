@@ -1,11 +1,23 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+@font-face {
+    font-family: 'Minion';
+    src: url('assets/fonts/Minion-Regular.otf') format('opentype');
+    font-weight: normal;
 }
 
+@font-face {
+    font-family: 'Minion';
+    src: url('assets/fonts/Minion-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+body {
+    font-family: 'Minion', serif;
+}
+
+
 .header {
-    background-color: #8C1D40; /* Elon maroon */
-    color: white;
+    background-color: #73000a; /* Elon maroon */
+    color: #b59a57;
     padding: 20px;
     text-align: center;
 }
