@@ -487,7 +487,3 @@ const firstYear = L.polygon([
 
 // Label the lot
 firstYear.bindPopup("<b>FY Lot</b><br>First Year Students Only");
-
-//TODO: REMOVE WHEN DONE
-map.on('click', e => console.log(e.latlng));
-
