@@ -9,8 +9,8 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 // Elon University bounding box (approx)
 const elonBounds = L.latLngBounds(
-    [36.0985, -79.5135], // Southwest corner
-    [36.1075, -79.4980]  // Northeast corner
+    [36.111493445024784, -79.51447248458864], // Southwest corner
+    [36.09532846648086, -79.48168516159059]  // Northeast corner
 );
 
 // Lock the map inside these bounds
