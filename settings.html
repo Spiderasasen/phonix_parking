@@ -3,13 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Account Settings</title>
-    <link rel="stylesheet" href="main.css" type="text/css">
     <link rel="stylesheet" href="settings.css" type="text/css">
 </head>
 <body>
+<!--header-->
     <div class="header">
-        <img onclick="window.location.href = 'index.html'" src="assets/user-account-icon-for-your-design-only-free-png(1).png" alt="Account Settings" class="icon_settings">
+        <img onclick="window.location.href = 'index.html'" src="assets/logo-3009510836(1).png" alt="Account Settings" class="icon_settings">
         <h1>Phoenix Parking</h1>
+    </div>
+
+<!--    main settings div-->
+    <div class="settings">
+<!--        email section-->
+        <div class="email">
+            <input type="email" id="email" value="jdoe@elon.edu" disabled>
+            <button id="changeEmail">Change Email</button>
+        </div>
+
+<!--        password Section-->
+        <div class="password">
+            <input type="password" id="password" value="Password" disabled>
+            <button id="changePassword">Change Password</button>
+        </div>
+
+<!--        current pass section-->
+        <div class="current_pass">
+            <select id="current_pass">
+                <option>Global</option>
+                <option>McMichael</option>
+                <option>Colonnades</option>
+                <option>Historic</option>
+                <option>Crest</option>
+            </select>
+            <button id="save_pass">Save Change in Parking Pass</button>
+        </div>
     </div>
 </body>
 </html>
