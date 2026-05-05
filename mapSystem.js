@@ -18,7 +18,18 @@ const elonBounds = L.latLngBounds(
 map.setMaxBounds(elonBounds);
 
 // Add a little bounce-back when hitting the edge
-map.setMinZoom(16);
+map.setMinZoom(15);
+
+//colors
+const red = "#FF0000";
+const green = "#00FF00";
+const yellow = "#FFD700";
+
+//universal
+const universal = "<b>Universal Lot</b><br>All Passes are permitted"
+
+//risk
+const risk = "<b>Risk Lot</b><br>All passes are at risk!"
 
 // Example polygon for McMichael Lot (approx coordinates)
 createLot([
@@ -26,288 +37,166 @@ createLot([
     [36.10394301863656, -79.50041051872907],
     [36.10330374262881, -79.50037296003109],
     [36.103318931970165, -79.50092019506485]
-], "#FFD700", "<b>FS Lot</b><br>Faculty/Staff Parking");
+], yellow, "<b>FS Lot</b><br>Faculty/Staff Parking");
 
-const nadesLot = L.polygon([
+//nads lot
+createLot([
     [36.10762732664536, -79.49874094427692],
     [36.10766199668379, -79.49775376158406],
     [36.104316267462984, -79.49764645911746],
     [36.104316267462984, -79.49846195786371]
-], {
-    color: "#22ff00",
-    fillColor: "#22ff00",
-    fillOpacity: 0.4
-}).addTo(map);
+], green, universal);
 
-nadesLot.bindPopup("<b>Universal Lot</b><br>All Passes are permitted");
-
-const admissionsLot = L.polygon([
+//admissions lot
+createLot([
     [36.10548356259765, -79.50264072470391],
     [36.1057135026161, -79.50264370327457],
     [36.10569183330637, -79.50359869522744],
     [36.10549246727527, -79.50359933328195]
-], {
-    color: "#ff0000",
-    fillColor: "#ff0000",
-    fillOpacity: 0.4
-}).addTo(map);
+], red, risk);
 
-admissionsLot.bindPopup("<b>Risk Lot</b><br>All passes are at risk!");
-
-const historicLot = L.polygon([
+//historic lot
+createLot([
     [36.10189510795925, -79.4992705194826],
     [36.1019059431385, -79.49854655108406],
     [36.10104129113651, -79.49852510016854],
     [36.101028288778146, -79.49926515675374]
-], {
-    color: "#22ff00",
-    fillColor: "#22ff00",
-    fillOpacity: 0.4
-}).addTo(map);
+], green, universal);
 
-historicLot.bindPopup("<b>Universal Lot</b><br>All Passes are permitted");
-
-const linderLot1 = L.polygon([
+//linder lots
+createLot([
     [36.10105643526185,  -79.50147525897609],
     [36.10106943761557, -79.50107305431021],
     [36.10089173859531, -79.50105696612358],
     [36.10088957153163, -79.5014618521539]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>FS Lot</b><br>All Passes are permitted");
 
-// Label the lot
-linderLot1.bindPopup("<b>FS Lot</b><br>Faculty/Staff Parking");
-
-const linderLot2 = L.polygon([
+createLot([
     [36.10100875534834,  -79.50216426913242],
     [36.10101742358965, -79.50179155947538],
     [36.10085922803529, -79.5017861967465],
     [36.100852726841325, -79.50216158776799]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>FS Lot</b><br>All Passes are permitted");
 
-// Label the lot
-linderLot2.bindPopup("<b>FS Lot</b><br>Faculty/Staff Parking");
-
-const moonyLot = L.polygon([
+//moony lot
+createLot([
     [36.10100874505716,  -79.50388639005328],
     [36.10103258271843, -79.50289696657525],
     [36.100887389578475, -79.50288892248194],
     [36.100857050679494, -79.5038676205022]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>FS Lot</b><br>All Passes are permitted");
 
-// Label the lot
-moonyLot.bindPopup("<b>FS Lot</b><br>Faculty/Staff Parking");
-
-const factulyLine = L.polygon([
+//faculty line
+createLot([
     [36.10066633978317, -79.50614192767037],
     [36.10074002143866, -79.50251321052166],
     [36.10067935019355, -79.50251316238086],
     [36.10061216630169, -79.50613927755522]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>FS Lot</b><br>All Passes are permitted");
 
-// Label the lot
-factulyLine.bindPopup("<b>FS Lot</b><br>Faculty/Staff Parking");
-
-const oaksLot = L.polygon([
+//oaks
+createLot([
     [36.103498316140985, -79.50689256191254],
     [36.10354601316716, -79.51025605201723],
     [36.105310782777075, -79.51029360294343],
     [36.10536281469463, -79.50763285160066]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>OK Lot</b><br>Oaks Parking");
 
-// Label the lot
-oaksLot.bindPopup("<b>OK Lot</b><br>Oaks Parking");
-
-const parkPlaceLot = L.polygon([
+//parks place
+createLot([
     [36.10344018513292, -79.50923413038255],
     [36.10344668927933, -79.50888812541963],
     [36.102956708739285, -79.50886666774751],
     [36.10294370036473, -79.50919657945634]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>OK Lot</b><br>Park Place Parking");
 
-// Label the lot
-parkPlaceLot.bindPopup("<b>OK Lot</b><br>Park Place Parking");
-
-const millPointLot = L.polygon([
+//mill point
+createLot([
     [36.09856127920777, -79.51005756855011],
     [36.098695706472206, -79.50685501098634],
     [36.09662289921603, -79.50773477554323],
     [36.09671830158719, -79.51015949249269]
-], {
-    color: "#22ff00",
-    fillColor: "#22ff00",
-    fillOpacity: 0.4
-}).addTo(map);
+], green, universal);
 
-// Label the lot
-millPointLot.bindPopup("<b>Universal Lot</b><br>All Passes are permitted");
-
-const southCampus1 = L.polygon([
+//south campus
+createLot([
     [36.09987613586578, -79.50224161148073],
     [36.09990215362856, -79.50094342231752],
     [36.096910054436684, -79.50080394744873],
     [36.096892708601956, -79.50217723846436]
-], {
-    color: "#22ff00",
-    fillColor: "#22ff00",
-    fillOpacity: 0.4
-}).addTo(map);
+], green, universal)
 
-// Label the lot
-southCampus1.bindPopup("<b>Universal Lot</b><br>All Passes are permitted");
-
-const southCampus2 = L.polygon([
+createLot([
     [36.10040805928753, -79.50064033269884],
     [36.100436245006, -79.49968010187149],
     [36.099441066206936, -79.4996076822281],
     [36.09947358858912, -79.50057595968248]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking")
 
-// Label the lot
-southCampus2.bindPopup("<b>FC Lot</b><br>Faculty/Staff Parking");
-
-const southCampus3 = L.polygon([
+createLot([
     [36.09802172176679, -79.49988126754762],
     [36.09795667578706, -79.49950844049455],
     [36.09764662254363, -79.49959158897401],
     [36.0977420236719, -79.4999322295189]
-], {
-    color: "#22ff00",
-    fillColor: "#22ff00",
-    fillOpacity: 0.4
-}).addTo(map);
+], green, universal)
 
-// Label the lot
-southCampus3.bindPopup("<b>Universal Lot</b><br>All Passes are permitted");
-
-const accountingLot = L.polygon([
+//accounting lot
+createLot([
     [36.10330118012353, -79.51111972332001],
     [36.10332069259577, -79.51051622629167],
     [36.102858896119265, -79.51047599315645],
     [36.102817702874454, -79.51110363006593]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking");
 
-// Label the lot
-accountingLot.bindPopup("<b>FC Lot</b><br>Faculty/Staff Parking");
-
-const artsLots = L.polygon([
+//arts west
+createLot([
     [36.103372910310775, -79.51226502656938],
     [36.1026466099482, -79.51156765222551],
     [36.102434138721954, -79.51223284006119],
     [36.10302818948331, -79.51268613338472]
-], {
-    color: "#22ff00",
-    fillColor: "#22ff00",
-    fillOpacity: 0.4
-}).addTo(map);
+], green, universal);
 
-// Label the lot
-artsLots.bindPopup("<b>Universal Lot</b><br>All Passes are permitted");
-
-const sharLot = L.polygon([
+//shar lots
+createLot([
     [36.10837893254687, -79.5118010044098],
     [36.10829221599479, -79.5115649700165],
     [36.107706876764276, -79.51194584369661],
     [36.10691774586057, -79.51023459434509],
     [36.10616763056433, -79.51069056987764],
     [36.10698712032378, -79.51262712478639]
-], {
-    color: "#22ff00",
-    fillColor: "#22ff00",
-    fillOpacity: 0.4
-}).addTo(map);
+], green, universal);
 
-// Label the lot
-sharLot.bindPopup("<b>Universal Lot</b><br>All Passes are permitted");
-
-const feildLot1 = L.polygon([
+createLot([
     [36.11148546033207, -79.50865745544435],
     [36.11148546033207, -79.50823903083803],
     [36.1111559499578, -79.50820684432985],
     [36.1111559499578, -79.50866818428041]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking");
 
-// Label the lot
-feildLot1.bindPopup("<b>FC Lot</b><br>Faculty/Staff Parking");
-
-const scharLots = L.polygon([
+createLot([
     [36.10701329466036, -79.50859308242799],
     [36.106917904789455, -79.50894176959993],
     [36.109389332247964, -79.51003074645998],
     [36.109476047588814, -79.5095854997635]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking");
 
-// Label the lot
-scharLots.bindPopup("<b>FC Lot</b><br>Faculty/Staff Parking");
-
-const feildLot2 = L.polygon([
+createLot([
     [36.109299922451946, -79.5087379217148],
     [36.1090614544995, -79.50759798288347],
     [36.108710254924034, -79.50757652521135],
     [36.10899424976396, -79.50892031192781]
-], {
-    color: "#22ff00",
-    fillColor: "#22ff00",
-    fillOpacity: 0.4
-}).addTo(map);
+], green, universal);
 
-// Label the lot
-feildLot2.bindPopup("<b>Universal Lot</b><br>All Passes are permitted");
-
-const gymLot = L.polygon([
+createLot([
     [36.10464700239933, -79.50631588697435],
     [36.10431312728728, -79.50617641210557],
     [36.10419605386004, -79.50680673122407],
     [36.10444754471082, -79.50701326131822]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
 
-// Label the lot
-gymLot.bindPopup("<b>FC Lot</b><br>Faculty/Staff Parking");
+], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking");
 
-const globalLot = L.polygon([
+//global lot
+createLot([
     [36.10759242516834, -79.50561046600343],
     [36.107718165257836, -79.50528860092165],
     [36.10776585972188, -79.5050472021103],
@@ -326,83 +215,47 @@ const globalLot = L.polygon([
     [36.10742766198783, -79.5055675506592],
     [36.10754473059901, -79.50557291507722],
     [36.10758592136515, -79.50561314821243]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>GN Lot</b><br>Global Neighborhood Parking");
 
-// Label the lot
-globalLot.bindPopup("<b>GN Lot</b><br>Global Neighborhood Parking");
-
-const nearHistoric1 = L.polygon([
+//historic
+createLot([
     [36.101886037247446, -79.49977397918701],
     [36.10189470961414, -79.49957281351091],
     [36.101645378689724, -79.49955135583879],
     [36.10163237009805, -79.49976593255998]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking")
 
-// Label the lot
-nearHistoric1.bindPopup("<b>FC Lot</b><br>Faculty/Staff Parking");
-
-const nearHistoric2 = L.polygon([
+createLot([
     [36.101356941598645, -79.49975788593294],
     [36.10136344591755, -79.49955135583879],
     [36.10093849595019, -79.49954867362977],
     [36.10095150465677, -79.49974983930589]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking");
 
-// Label the lot
-nearHistoric2.bindPopup("<b>FC Lot</b><br>Faculty/Staff Parking");
-
-const innLot1 = L.polygon([
+//inn lots
+createLot([
     [36.10734654718037, -79.50091123580934],
     [36.10734654718037, -79.50004220008852],
     [36.10713842455922, -79.49997782707216],
     [36.107095065610395, -79.50089514255525]
-], {
-    color: "#ff0000",
-    fillColor: "#ff0000",
-    fillOpacity: 0.4
-}).addTo(map);
+], red, risk)
 
-innLot1.bindPopup("<b>Risk Lot</b><br>All passes are at risk!");
-
-const innLot2 = L.polygon([
+createLot([
     [36.10691403002467, -79.50053036212923],
     [36.106974732686204, -79.49902832508089],
     [36.10684899140668, -79.49903637170793],
     [36.106792624560846, -79.50051426887514]
-], {
-    color: "#ff0000",
-    fillColor: "#ff0000",
-    fillOpacity: 0.4
-}).addTo(map);
+], red, risk)
 
-innLot2.bindPopup("<b>Risk Lot</b><br>All passes are at risk!");
-
-const innLot3 = L.polygon([
+createLot([
     [36.108240224293766, -79.49883520603181],
     [36.108255399707346, -79.49859380722047],
     [36.107787128452394, -79.49853211641313],
     [36.107782792594406, -79.4988164305687]
-], {
-    color: "#ff0000",
-    fillColor: "#ff0000",
-    fillOpacity: 0.4
-}).addTo(map);
+], red, risk)
 
-innLot3.bindPopup("<b>Risk Lot</b><br>All passes are at risk!");
-
-const danLot1 = L.polygon([
+//dan lots
+createLot([
     [36.108485906357586, -79.49857234954835],
     [36.109951399611255, -79.49719905853273],
     [36.109179634382905, -79.49454903602602],
@@ -410,16 +263,9 @@ const danLot1 = L.polygon([
     [36.10786154589624, -79.4943130016327],
     [36.10772279845308, -79.49438810348512],
     [36.10757537902619, -79.49640512466432]
-], {
-    color: "#22ff00",
-    fillColor: "#22ff00",
-    fillOpacity: 0.4
-}).addTo(map);
+], green, universal)
 
-// Label the lot
-danLot1.bindPopup("<b>Universal Lot</b><br>All Passes are permitted");
-
-const danLot2 = L.polygon([
+createLot([
     [36.1063438194126, -79.49643999338151],
     [36.10606848689597, -79.49597328901292],
     [36.10595141608468, -79.49610203504564],
@@ -430,57 +276,31 @@ const danLot2 = L.polygon([
     [36.105684754141016, -79.49645340442657],
     [36.10605114308308, -79.49629515409471],
     [36.10619206145193, -79.49648827314378]
-], {
-    color: "#22ff00",
-    fillColor: "#22ff00",
-    fillOpacity: 0.4
-}).addTo(map);
+], green, universal)
 
-// Label the lot
-danLot2.bindPopup("<b>Universal Lot</b><br>All Passes are permitted");
-
-const danLot3 = L.polygon([
+createLot([
     [36.108394113100175, -79.49433982372284],
     [36.108472157900096, -79.49353247880937],
     [36.10821851201683, -79.49321061372758],
     [36.108005403635104, -79.49380338191988],
     [36.108092772728284, -79.49442833662035]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
+], yellow,"<b>FY Lot</b><br>First Year Students Only")
 
-// Label the lot
-danLot3.bindPopup("<b>FY Lot</b><br>First Year Students Only");
-
-const francesLot = L.polygon([
+//france lots
+createLot([
     [36.10769622768954, -79.48975861072542],
     [36.107074028899945, -79.48946088552476],
     [36.10696129549082, -79.48994100093843],
     [36.10755531201905, -79.49021190404893]
-], {
-    color: "#22ff00",
-    fillColor: "#22ff00",
-    fillOpacity: 0.4
-}).addTo(map);
+], green, universal)
 
-// Label the lot
-francesLot.bindPopup("<b>Universal Lot</b><br>All Passes are permitted");
-
-const firstYear = L.polygon([
+//first year lot
+createLot([
     [36.10941298672499, -79.48686718940735],
     [36.10945634439433, -79.48515057563783],
     [36.10849379850305, -79.48502182960512],
     [36.10849379850305, -79.48673844337465]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
-
-// Label the lot
-firstYear.bindPopup("<b>FY Lot</b><br>First Year Students Only");
+], yellow, "<b>FY Lot</b><br>First Year Students Only")
 
 //functions
 function createLot(coords, color, popupText){
