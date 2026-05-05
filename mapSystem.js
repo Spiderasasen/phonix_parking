@@ -21,19 +21,12 @@ map.setMaxBounds(elonBounds);
 map.setMinZoom(16);
 
 // Example polygon for McMichael Lot (approx coordinates)
-const mcmichaelLot = L.polygon([
-    [36.103908346956736,  -79.50096014397515],
+createLot([
+    [36.103908346956736, -79.50096014397515],
     [36.10394301863656, -79.50041051872907],
     [36.10330374262881, -79.50037296003109],
     [36.103318931970165, -79.50092019506485]
-], {
-    color: "#FFD700",       // border color
-    fillColor: "#FFD700",   // fill color
-    fillOpacity: 0.4
-}).addTo(map);
-
-// Label the lot
-mcmichaelLot.bindPopup("<b>FS Lot</b><br>Faculty/Staff Parking");
+], "#FFD700", "<b>FS Lot</b><br>Faculty/Staff Parking");
 
 const nadesLot = L.polygon([
     [36.10762732664536, -79.49874094427692],
@@ -488,3 +481,15 @@ const firstYear = L.polygon([
 
 // Label the lot
 firstYear.bindPopup("<b>FY Lot</b><br>First Year Students Only");
+
+//functions
+function createLot(coords, color, popupText){
+    const lot = L.polygon(coords, {
+        fillColor: color,
+        color: color,
+        fillOpacity: 0.4
+    }).addTo(map);
+
+    lot.bindPopup(popupText);
+    return lot;
+}
