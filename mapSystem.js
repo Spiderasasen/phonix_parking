@@ -26,10 +26,10 @@ const green = "#00FF00";
 const yellow = "#FFD700";
 
 //universal
-const universal = "<b>Universal Lot</b><br>All Passes are permitted"
+const universal = "<b>Universal Lot</b><br><img width='250' height='150' src='assets/universal.png' alt='bar graph of universal lots'>"
 
 //risk
-const risk = "<b>Risk Lot</b><br>All passes are at risk!"
+const risk = "<b>Risk Lot</b><br><img width='250' height='150' src='assets/risk.png' alt='bar graph of risky lots'>"
 
 // Example polygon for McMichael Lot (approx coordinates)
 createLot([
@@ -37,7 +37,7 @@ createLot([
     [36.10394301863656, -79.50041051872907],
     [36.10330374262881, -79.50037296003109],
     [36.103318931970165, -79.50092019506485]
-], yellow, "<b>FS Lot</b><br>Faculty/Staff Parking");
+], yellow, "<b>FS Lot</b><br><img width='250' height='150' src='assets/yellow_lots/mcmichal.png' alt='mcmichal factuly lot'>");
 
 //nads lot
 createLot([
