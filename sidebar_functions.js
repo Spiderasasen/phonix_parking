@@ -1,19 +1,3 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const sidebar = document.getElementById("sidebar");
-    const openBtn = document.getElementById("openSidebar");
-    const closeBtn = document.getElementById("closeSideBar");
-
-    openBtn.onclick = () => {
-        sidebar.classList.add("open");
-        openBtn.style.display = "none";   // hide burger
-    };
-
-    closeBtn.onclick = () => {
-        sidebar.classList.remove("open");
-        openBtn.style.display = "block";  // show burger
-    };
-});
-
 
 //button functions
 const reportButton = document.getElementById("submitTicket");
@@ -33,7 +17,6 @@ reportButton.onclick = () =>{
     ticketDay.value = "Select a Day";
     ticketTime.value = "";
     ticketLocation.value = "Select a Lot";
-    sidebar.classList.remove("open");
 }
 
 //for filter day
@@ -43,5 +26,4 @@ filterButton.onclick = () =>{
     filterDay.value = "Any";
     inputTime.value = "";
     outputTime.value = "";
-    sidebar.classList.remove("open");
 }

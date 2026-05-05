@@ -1,6 +1,6 @@
 // Create a real-world map centered on Elon University
 const map = L.map('map').setView([36.1025, -79.5069], 16);
-map.zoomControl.setPosition("bottomright");
+map.zoomControl.setPosition("bottomleft");
 
 // Add OpenStreetMap tiles (free, no key needed)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
