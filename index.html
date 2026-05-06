@@ -87,24 +87,6 @@
 
 <script src="sidebar_functions.js"></script>
 <script src="mapSystem.js"></script>
-<script>
-    const slider = document.getElementById("time-slider");
-    const label = document.getElementById("time-label");
-
-    function minutesToTime(mins) {
-        let h = Math.floor(mins / 60);
-        let m = mins % 60;
-        let ampm = h >= 12 ? "PM" : "AM";
-        h = h % 12 || 12;
-        m = m.toString().padStart(2, "0");
-        return `${h}:${m} ${ampm}`;
-    }
-
-    slider.oninput = () => {
-        const time = minutesToTime(slider.value);
-        label.textContent = `Tuesday, ${time}`;
-    };
-
-</script>
+<script src="time_slider.js"></script>
 </body>
 </html>
