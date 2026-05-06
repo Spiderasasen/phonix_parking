@@ -25,11 +25,14 @@ const red = "#FF0000";
 const green = "#00FF00";
 const yellow = "#FFD700";
 
+//graph that will be used a lot
+const graph = "<img width='250' height='150' src='assets/shit_you_want_to_use_1_million_times.png' alt='graph'>"
+
 //universal
-const universal = "<b>Universal Lot</b><br><img width='250' height='150' src='assets/universal.png' alt='bar graph of universal lots'>"
+const universal = `<b>Universal Lot</b><br> ${graph}`
 
 //risk
-const risk = "<b>Risk Lot</b><br><img width='250' height='150' src='assets/risk.png' alt='bar graph of risky lots'>"
+const risk = `<b>Risk Lot</b><br> ${graph}`
 
 // Example polygon for McMichael Lot (approx coordinates)
 createLot([
@@ -37,7 +40,7 @@ createLot([
     [36.10394301863656, -79.50041051872907],
     [36.10330374262881, -79.50037296003109],
     [36.103318931970165, -79.50092019506485]
-], yellow, "<b>FS Lot</b><br><img width='250' height='150' src='assets/yellow_lots/mcmichal.png' alt='mcmichal factuly lot'>");
+], yellow, `<b>FS Lot</b><br> ${graph}`);
 
 //nads lot
 createLot([
@@ -69,14 +72,14 @@ createLot([
     [36.10106943761557, -79.50107305431021],
     [36.10089173859531, -79.50105696612358],
     [36.10088957153163, -79.5014618521539]
-], yellow, "<b>FS Lot</b><br>All Passes are permitted");
+], yellow, `<b>FS Lot</b><br>${graph}`);
 
 createLot([
     [36.10100875534834,  -79.50216426913242],
     [36.10101742358965, -79.50179155947538],
     [36.10085922803529, -79.5017861967465],
     [36.100852726841325, -79.50216158776799]
-], yellow, "<b>FS Lot</b><br>All Passes are permitted");
+], yellow, `<b>FS Lot</b><br>${graph}`);
 
 //moony lot
 createLot([
@@ -84,7 +87,7 @@ createLot([
     [36.10103258271843, -79.50289696657525],
     [36.100887389578475, -79.50288892248194],
     [36.100857050679494, -79.5038676205022]
-], yellow, "<b>FS Lot</b><br>All Passes are permitted");
+], yellow, `<b>FS Lot</b><br>${graph}`);
 
 //faculty line
 createLot([
@@ -92,7 +95,7 @@ createLot([
     [36.10074002143866, -79.50251321052166],
     [36.10067935019355, -79.50251316238086],
     [36.10061216630169, -79.50613927755522]
-], yellow, "<b>FS Lot</b><br>All Passes are permitted");
+], yellow, `<b>FS Lot</b><br>${graph}`);
 
 //oaks
 createLot([
@@ -131,7 +134,7 @@ createLot([
     [36.100436245006, -79.49968010187149],
     [36.099441066206936, -79.4996076822281],
     [36.09947358858912, -79.50057595968248]
-], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking")
+], yellow, `<b>FS Lot</b><br>${graph}`)
 
 createLot([
     [36.09802172176679, -79.49988126754762],
@@ -146,7 +149,7 @@ createLot([
     [36.10332069259577, -79.51051622629167],
     [36.102858896119265, -79.51047599315645],
     [36.102817702874454, -79.51110363006593]
-], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking");
+], yellow, `<b>FS Lot</b><br>${graph}`);
 
 //arts west
 createLot([
@@ -171,14 +174,14 @@ createLot([
     [36.11148546033207, -79.50823903083803],
     [36.1111559499578, -79.50820684432985],
     [36.1111559499578, -79.50866818428041]
-], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking");
+], yellow, `<b>FS Lot</b><br>${graph}`);
 
 createLot([
     [36.10701329466036, -79.50859308242799],
     [36.106917904789455, -79.50894176959993],
     [36.109389332247964, -79.51003074645998],
     [36.109476047588814, -79.5095854997635]
-], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking");
+], yellow, `<b>FS Lot</b><br>${graph}`);
 
 createLot([
     [36.109299922451946, -79.5087379217148],
@@ -193,7 +196,7 @@ createLot([
     [36.10419605386004, -79.50680673122407],
     [36.10444754471082, -79.50701326131822]
 
-], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking");
+], yellow, `<b>FS Lot</b><br>${graph}`);
 
 //global lot
 createLot([
@@ -223,14 +226,14 @@ createLot([
     [36.10189470961414, -79.49957281351091],
     [36.101645378689724, -79.49955135583879],
     [36.10163237009805, -79.49976593255998]
-], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking")
+], yellow, `<b>FS Lot</b><br>${graph}`)
 
 createLot([
     [36.101356941598645, -79.49975788593294],
     [36.10136344591755, -79.49955135583879],
     [36.10093849595019, -79.49954867362977],
     [36.10095150465677, -79.49974983930589]
-], yellow, "<b>FC Lot</b><br>Faculty/Staff Parking");
+], yellow, `<b>FS Lot</b><br>${graph}`);
 
 //inn lots
 createLot([
