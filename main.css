@@ -13,7 +13,8 @@
 html, body{
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     height: 100%;
 }
 
@@ -135,4 +136,34 @@ hr{
     background-color: #73000a;
     border: none;
     height: 10%;
+}
+
+/*time section*/
+.time-container {
+    position: fixed;
+    bottom: 10px;          /* below the header */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;       /* above EVERYTHING */
+
+    background: #73000a;
+    color: #b59a57;
+    padding: 20px;
+    border: 3px solid #b59a57;
+    border-radius: 10px;
+    width: 350px;
+    text-align: center;
+    font-family: 'Minion', serif;
+}
+
+
+#time-slider {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.time-range-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
 }

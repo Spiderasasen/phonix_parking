@@ -70,10 +70,41 @@
         </div>
     </div>
 
+<!--    time section-->
+<div class="time-container">
+    <div id="time-label">Tuesday, 3:22 PM</div>
+
+    <input type="range" id="time-slider" min="0" max="1439" value="842">
+
+    <div class="time-range-labels">
+        <span>12:00 AM</span>
+        <span>11:59 PM</span>
+    </div>
+</div>
+
 <!--    for the map to work-->
     <div id="map"></div>
 
 <script src="sidebar_functions.js"></script>
 <script src="mapSystem.js"></script>
+<script>
+    const slider = document.getElementById("time-slider");
+    const label = document.getElementById("time-label");
+
+    function minutesToTime(mins) {
+        let h = Math.floor(mins / 60);
+        let m = mins % 60;
+        let ampm = h >= 12 ? "PM" : "AM";
+        h = h % 12 || 12;
+        m = m.toString().padStart(2, "0");
+        return `${h}:${m} ${ampm}`;
+    }
+
+    slider.oninput = () => {
+        const time = minutesToTime(slider.value);
+        label.textContent = `Tuesday, ${time}`;
+    };
+
+</script>
 </body>
 </html>
